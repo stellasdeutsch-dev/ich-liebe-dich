@@ -572,6 +572,55 @@ dialog.lb button:hover{background:var(--orange-2)}
 .ph{animation:phf 4.4s ease-in-out infinite alternate}
 .ph.a{animation-delay:-1.2s}.ph.c{animation-delay:-2.6s}
 @keyframes phf{to{margin-top:-16px}}
+
+/* topic visuals */
+.vz{margin-block:30px 0;transition:background .25s}
+.vz:hover{background:var(--cream)}
+.vz .ill{width:100%;height:auto;display:block;margin-inline:auto}
+.vz p{margin:0}
+.vz b{color:var(--ink);font-weight:700}
+.vzrow{display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:start;gap:14px;margin-top:12px;text-align:center}
+.vzrow b{display:block;font:400 clamp(30px,3.8vw,46px)/1 var(--f-display);color:var(--ink);letter-spacing:.01em;hyphens:manual}
+.vzrow span{display:block;font-size:clamp(14px,1.25vw,16px);line-height:1.3;color:var(--mute);margin-top:4px}
+.vzrow .ct span{color:var(--text);font-size:clamp(14px,1.35vw,17px)}
+.vzrow .vzsw s{color:var(--mute);text-decoration-color:var(--red)}
+.vzrow .vzsw i{font-style:normal;margin-inline:.2em;color:var(--mute)}
+.vzrow .vzsw u{text-decoration:none;color:var(--orange-d)}
+.vzrow .tkg{color:var(--green-d)}
+.vzrow.two{grid-template-columns:1fr 1.7fr;text-align:left}
+.vzrow.two b{font-size:clamp(30px,3.6vw,44px)}
+.vzrow.two span[lang=de]{color:var(--ink);font-weight:500;font-size:clamp(15px,1.5vw,18px)}
+.vzrow.two .vzno{color:var(--orange-d);font-weight:600}
+.vzrow.three{grid-template-columns:1fr 1.35fr;text-align:left;align-items:center}
+.vzrow.three .no s{font:400 clamp(26px,3.2vw,40px)/1.05 var(--f-display);color:var(--mute);text-decoration-color:var(--red);hyphens:manual}
+.vzrow.three b{color:var(--green-d);font-size:clamp(30px,3.6vw,44px)}
+.vzmr{display:grid;grid-template-columns:minmax(150px,300px) minmax(0,1fr);align-items:center;gap:clamp(14px,3vw,36px)}
+.vzmr+.vzmr{margin-top:18px}
+.vzs{font:400 clamp(32px,4.2vw,54px)/1.05 var(--f-display);color:var(--ink);hyphens:manual}
+.vzs .g{color:var(--green-d)}.vzs .o{color:var(--orange-d)}
+.vzs em{display:block;font:400 clamp(14px,1.3vw,16px)/1.3 var(--f-body);color:var(--mute);margin-top:4px;font-style:normal}
+.vzcap{text-align:center;color:var(--text);margin-top:14px;font-size:clamp(15px,1.4vw,18px)}
+.vzcaps{text-align:center;font:400 clamp(28px,3.4vw,44px)/1.08 var(--f-display);color:var(--ink);margin-top:10px;hyphens:manual}
+.vzcaps span{display:block;font:400 clamp(14px,1.35vw,17px)/1.3 var(--f-body);color:var(--mute);margin-top:6px}
+@media (max-width:640px){
+  .vzrow{grid-template-columns:1fr 1fr}
+  .vzrow .ct{grid-column:1/-1;order:3}
+  .vzrow.two,.vzrow.three{grid-template-columns:1fr}
+  .vzrow.two{text-align:center}
+  .vzrow.three{text-align:center}
+  .vzmr{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .vzmr .ill{max-width:280px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .vz-steam path{animation:vzUp 2.8s ease-in-out infinite;transform-box:fill-box}
+  .vz-steam path:nth-child(2){animation-delay:.7s}.vz-steam path:nth-child(3){animation-delay:1.3s}
+  .vz-wave{animation:vzWave 4s ease-in-out infinite;transform-box:fill-box}
+  .vz-bub circle{animation:vzUp 2.4s ease-in-out infinite;transform-box:fill-box}
+  .vz-chew{animation:vzChew 1.1s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+}
+@keyframes vzUp{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes vzWave{0%,100%{transform:translateX(0)}50%{transform:translateX(-14px)}}
+@keyframes vzChew{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.4)}}
 </style>
 
 </head>
@@ -825,6 +874,21 @@ dialog.lb button:hover{background:var(--orange-2)}
       </div>
     </div>
 
+    <figure class="box vz rv" data-vz="akk">
+      <svg class="ill" viewBox="0 0 900 240" aria-hidden="true" focusable="false">
+        <path d="M0 214h900" stroke="#E4E4DC" stroke-width="4"/>
+        <g class="vz-a"><circle cx="150" cy="86" r="44" fill="#C4EBA1"/><circle cx="136" cy="84" r="5" fill="#3B3B3B"/><circle cx="164" cy="84" r="5" fill="#3B3B3B"/><path d="M136 102q14 12 28 0" fill="none" stroke="#3B3B3B" stroke-width="4" stroke-linecap="round"/><path d="M92 214c8-46 32-74 58-74s50 28 58 74z" fill="#C4EBA1"/><path d="M198 160l64-40" stroke="#C4EBA1" stroke-width="20" stroke-linecap="round"/></g>
+        <path d="M280 110C400 30 520 30 640 106" fill="none" stroke="#D98B36" stroke-width="4" stroke-dasharray="9 11" stroke-linecap="round"/>
+        <g class="vz-hb"><path id="vzHeart" d="M480 92c-30-22-46-40-46-58a24 24 0 0 1 46-10 24 24 0 0 1 46 10c0 18-16 36-46 58z" fill="#F5B567"/></g>
+        <g class="vz-b"><circle cx="750" cy="86" r="44" fill="#F5B567"/><circle cx="736" cy="84" r="5" fill="#3B3B3B"/><circle cx="764" cy="84" r="5" fill="#3B3B3B"/><circle cx="750" cy="108" r="9" fill="#3B3B3B"/><path d="M692 214c8-46 32-74 58-74s50 28 58 74z" fill="#F5B567"/></g>
+      </svg>
+      <div class="vzrow" lang="de">
+        <p><b class="tkg">Ich</b><span lang="ru">кто</span></p>
+        <p class="ct"><span lang="ru">du только для того, кто действует</span></p>
+        <p><b class="vzsw"><s>du</s><i aria-hidden="true">→</i><u>dich</u></b><span lang="ru">кого</span></p>
+      </div>
+    </figure>
+
     <div class="box g rv" id="mog">
       <h3 class="h3" aria-label="mögen меняет лицо"><span class="wd">mög<svg class="rd rd-e" aria-hidden="true"><use href="#L-e"/></svg>n</span> <span class="wd">м<svg class="rd rd-e" aria-hidden="true"><use href="#L-e"/></svg>ня<svg class="rd rd-e" aria-hidden="true"><use href="#L-e"/></svg>т</span> <span class="wd">лиц<svg class="rd rd-o" aria-hidden="true"><use href="#L-o"/></svg></span></h3>
       <p class="t2 mt" style="margin-top:12px">В единственном числе гласная прыгает в <b>a.</b> У ich и er окончания нет. Как у модальных.</p>
@@ -865,6 +929,20 @@ dialog.lb button:hover{background:var(--orange-2)}
         <div class="vc"><div class="vc-top"><button type="button" class="vc-play" data-say="Ich bin in dich verliebt." aria-label="Прослушать"><svg class="ic"><use href="#i-play"/></svg></button><div class="wave" aria-hidden="true"></div></div><p class="vc-de" lang="de">Ich bin in dich verliebt.</p><p class="vc-ru"><b>Состояние.</b> Я в тебя влюблена. Без mich.</p></div>
       </div>
     </div>
+
+    <figure class="box vz rv" data-vz="ev">
+      <svg class="ill" viewBox="0 0 900 190" aria-hidden="true" focusable="false">
+        <path d="M30 120H300" stroke="#E4E4DC" stroke-width="6" stroke-linecap="round" stroke-dasharray="4 16"/>
+        <rect class="vz-state" x="320" y="104" width="550" height="32" rx="16" fill="#F5B567"/>
+        <g class="vz-hearts" fill="#fff"><path d="M430 124c-9-7-14-12-14-17a7 7 0 0 1 14-3 7 7 0 0 1 14 3c0 5-5 10-14 17z"/><path d="M570 124c-9-7-14-12-14-17a7 7 0 0 1 14-3 7 7 0 0 1 14 3c0 5-5 10-14 17z"/><path d="M710 124c-9-7-14-12-14-17a7 7 0 0 1 14-3 7 7 0 0 1 14 3c0 5-5 10-14 17z"/><path d="M840 124c-9-7-14-12-14-17a7 7 0 0 1 14-3 7 7 0 0 1 14 3c0 5-5 10-14 17z"/></g>
+        <path d="M310 80V160" stroke="#3B3B3B" stroke-width="5" stroke-linecap="round"/>
+        <g class="vz-fall"><path d="M310 74c-22-16-34-30-34-43a18 18 0 0 1 34-7 18 18 0 0 1 34 7c0 13-12 27-34 43z" fill="#C4553D"/></g>
+      </svg>
+      <div class="vzrow two">
+        <p><b>Событие</b><span lang="de">Ich habe mich in dich verliebt.</span></p>
+        <p><b>Состояние</b><span lang="de">Ich bin in dich verliebt.</span><span class="vzno">Без mich.</span></p>
+      </div>
+    </figure>
   </div>
 </section>
 
@@ -888,6 +966,22 @@ dialog.lb button:hover{background:var(--orange-2)}
       <div class="err"><p class="bad" lang="de">Ich bin verliebt mit dir</p><p class="good" lang="de">Ich bin in dich verliebt <button type="button" class="say" data-say="Ich bin in dich verliebt." aria-label="Озвучить"><svg class="ic"><use href="#i-volume-2"/></svg></button></p><p>with это английский. По-немецки <b>in + Akkusativ.</b> В тебя. Как по-русски.</p></div>
       <div class="err" style="grid-column:1/-1"><p class="bad" lang="de">Ich habe in dich verliebt</p><p class="good" lang="de">Ich habe mich in dich verliebt <button type="button" class="say" data-say="Ich habe mich in dich verliebt." aria-label="Озвучить"><svg class="ic"><use href="#i-volume-2"/></svg></button></p><p>Пропало русское <b>«-ся».</b> Без mich глагол не работает.</p></div>
     </div>
+
+    <figure class="box vz rv" data-vz="strudel" style="margin-top:30px">
+      <svg class="ill" viewBox="0 0 960 330" aria-hidden="true" focusable="false">
+        <rect x="0" y="270" width="960" height="60" fill="#F3E7D3"/>
+        <rect x="54" y="30" width="220" height="240" fill="#FBF4E9" stroke="#C9A77E" stroke-width="10"/>
+        <g class="vz-frau"><path d="M112 270c4-58 24-92 52-92s48 34 52 92z" fill="#A9E0E6"/><circle cx="164" cy="132" r="44" fill="#F7E0C8"/><path d="M122 126c0-34 18-52 42-52s42 18 42 52c-10-14-26-20-42-20s-32 6-42 20z" fill="#B7B7AE"/><circle cx="164" cy="72" r="15" fill="#B7B7AE"/><circle cx="150" cy="134" r="5" fill="#3B3B3B"/><circle cx="178" cy="134" r="5" fill="#3B3B3B"/><path d="M150 152q14 10 28 0" fill="none" stroke="#3B3B3B" stroke-width="4" stroke-linecap="round"/></g>
+        <path d="M250 180H470" stroke="#C4553D" stroke-width="4" stroke-dasharray="9 11" stroke-linecap="round"/><path d="M336 170l20 20M356 170l-20 20" stroke="#C4553D" stroke-width="5" stroke-linecap="round"/>
+        <g class="vz-plate"><ellipse cx="560" cy="214" rx="130" ry="26" fill="#fff" stroke="#E4E4DC" stroke-width="4"/><path d="M450 212c10-30 40-44 110-44s100 14 110 44c-40 10-180 10-220 0z" fill="#C9A77E"/><path d="M482 188l12 18M516 180l10 22M552 176l6 26M590 178l4 24M624 184l-2 22" stroke="#FBF4E9" stroke-width="5" stroke-linecap="round"/><g class="vz-steam" fill="none" stroke="#D98B36" stroke-width="4" stroke-linecap="round"><path d="M520 150c-8-10 8-18 0-30"/><path d="M570 146c-8-10 8-18 0-30"/><path d="M618 150c-8-10 8-18 0-30"/></g><rect x="470" y="236" width="180" height="34" rx="6" fill="#C9A77E"/></g>
+        <path class="vz-okline" d="M560 326V284" fill="none" stroke="#4C8128" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 11"/><path d="M548 294 560 278 572 294" fill="none" stroke="#4C8128" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <g class="vz-herr"><rect x="780" y="66" width="130" height="204" fill="#FBF4E9" stroke="#C9A77E" stroke-width="8"/><path d="M806 270c2-46 12-76 34-76s32 30 34 76z" fill="#8FBF6E"/><circle cx="840" cy="156" r="34" fill="#F7E0C8"/><path d="M806 150c4-24 16-36 34-36s30 12 34 36c-12-8-22-12-34-12s-22 4-34 12z" fill="#7A6A58"/><path class="vz-chew" d="M828 170q12 8 24 0" fill="none" stroke="#3B3B3B" stroke-width="4" stroke-linecap="round"/><circle cx="828" cy="156" r="4" fill="#3B3B3B"/><circle cx="852" cy="156" r="4" fill="#3B3B3B"/></g>
+      </svg>
+      <div class="vzrow three" lang="de">
+        <p class="no"><s>Ich liebe dich.</s></p>
+        <p class="yes"><b>Der schmeckt super!</b><span lang="ru">Про штрудель. Не про неё.</span></p>
+      </div>
+    </figure>
   </div>
 </section>
 
@@ -905,6 +999,18 @@ dialog.lb button:hover{background:var(--orange-2)}
       <div class="ex"><span class="ii"><svg class="ic"><use href="#i-formal"/></svg></span><h3>На «Вы» тоже бывает</h3><p>Фрау Хубер, например. Форма одна: <b>Sie.</b> С большой буквы.</p><p class="lne" lang="de">Ich mag Sie. <button type="button" class="say" data-say="Ich mag Sie." aria-label="Озвучить"><svg class="ic"><use href="#i-volume-2"/></svg></button></p></div>
       <div class="ex"><span class="ii"><svg class="ic"><use href="#i-ring"/></svg></span><h3>Подвох: auf + Akkusativ</h3><p>На кого? <b>auf dich.</b> И про вещи тоже можно.</p><p class="lne" lang="de">Ich stehe auf Jazz. <button type="button" class="say" data-say="Ich stehe auf Jazz." aria-label="Озвучить"><svg class="ic"><use href="#i-volume-2"/></svg></button></p></div>
     </div>
+
+    <figure class="box vz rv" data-vz="miss">
+      <div class="vzmr">
+        <svg class="ill" viewBox="0 0 420 150" aria-hidden="true" focusable="false"><circle cx="70" cy="62" r="36" fill="#F5B567"/><path d="M26 150c6-36 26-56 44-56s38 20 44 56z" fill="#F5B567"/><path d="M130 72H286" stroke="#D98B36" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 12"/><path d="M272 58l18 14-18 14" fill="none" stroke="#D98B36" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="350" cy="62" r="36" fill="#C4EBA1"/><path d="M306 150c6-36 26-56 44-56s38 20 44 56z" fill="#C4EBA1"/></svg>
+        <p class="vzs" lang="de"><span class="o">Ich</span> vermisse <span class="g">dich.</span><em lang="ru">vermissen берёт Akkusativ</em></p>
+      </div>
+      <div class="vzmr">
+        <svg class="ill" viewBox="0 0 420 150" aria-hidden="true" focusable="false"><circle cx="70" cy="62" r="36" fill="#C4EBA1"/><path d="M26 150c6-36 26-56 44-56s38 20 44 56z" fill="#C4EBA1"/><path d="M130 72H286" stroke="#D98B36" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 12"/><path d="M272 58l18 14-18 14" fill="none" stroke="#D98B36" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="350" cy="62" r="36" fill="#F5B567"/><path d="M306 150c6-36 26-56 44-56s38 20 44 56z" fill="#F5B567"/></svg>
+        <p class="vzs" lang="de"><span class="g">Du</span> fehlst <span class="o">mir.</span><em lang="ru">fehlen берёт Dativ</em></p>
+      </div>
+      <p class="vzcap" lang="ru">Один смысл, два падежа</p>
+    </figure>
     <h3 class="h3 mt3" aria-label="Для открытки и переписки"><span class="wd">Для</span> <span class="wd"><svg class="rd rd-o" aria-hidden="true"><use href="#L-o"/></svg>ткрытки</span> <span class="wd">и п<svg class="rd rd-e" aria-hidden="true"><use href="#L-e"/></svg>р<svg class="rd rd-e" aria-hidden="true"><use href="#L-e"/></svg>пи<svg class="rd rd-c" aria-hidden="true"><use href="#L-c"/></svg>ки</span></h3>
     <div class="vgrid">
       <div class="vc rv"><div class="vc-top"><button type="button" class="vc-play" data-say="Du bist mein Ein und Alles." aria-label="Прослушать"><svg class="ic"><use href="#i-play"/></svg></button><div class="wave" aria-hidden="true"></div><span class="vc-time">0:02</span></div><p class="vc-de" lang="de">Du bist mein Ein und Alles.</p><p class="vc-ru">Ты для меня <b>всё.</b> Для открытки. На кухне так не говорят.</p></div>
@@ -912,6 +1018,18 @@ dialog.lb button:hover{background:var(--orange-2)}
       <div class="vc rv"><div class="vc-top"><button type="button" class="vc-play" data-say="Liebe geht durch den Magen." aria-label="Прослушать"><svg class="ic"><use href="#i-play"/></svg></button><div class="wave" aria-hidden="true"></div><span class="vc-time">0:02</span></div><p class="vc-de" lang="de">Liebe geht durch den Magen.</p><p class="vc-ru">Путь к сердцу <b>через желудок.</b> durch берёт Akkusativ. Герр Хубер кивает.</p></div>
       <div class="vc rv"><div class="vc-top"><button type="button" class="vc-play" data-say="Der Liebe ist kein Ding unmöglich." aria-label="Прослушать"><svg class="ic"><use href="#i-play"/></svg></button><div class="wave" aria-hidden="true"></div><span class="vc-time">0:03</span></div><p class="vc-de" lang="de">Der Liebe ist kein Ding unmöglich.</p><p class="vc-ru">Для любви <b>нет невозможного.</b> Der здесь Dativ. Маскировка.</p></div>
     </div>
+
+    <figure class="box vz rv" data-vz="ohr" style="margin-top:30px">
+      <svg class="ill" viewBox="0 0 960 300" aria-hidden="true" focusable="false">
+        <circle cx="820" cy="64" r="44" fill="#F5B567"/>
+        <g class="vz-gull" fill="#3B3B3B"><path d="M260 52c-14-12-28-14-44-8 12 2 22 8 30 16zM262 52c14-12 28-14 44-8-12 2-22 8-30 16z"/></g>
+        <g class="vz-head"><ellipse cx="480" cy="150" rx="98" ry="110" fill="#F7E0C8"/><path d="M384 138c2-74 54-112 98-112s96 38 98 112c-22-26-58-44-98-44s-76 18-98 44z" fill="#B8712F"/><circle cx="446" cy="150" r="7" fill="#3B3B3B"/><circle cx="514" cy="150" r="7" fill="#3B3B3B"/><path d="M458 186q22 16 44 0" fill="none" stroke="#3B3B3B" stroke-width="5" stroke-linecap="round"/>          <ellipse cx="366" cy="222" rx="26" ry="38" fill="#F7E0C8"/><ellipse cx="594" cy="222" rx="26" ry="38" fill="#F7E0C8"/></g>
+        <path class="vz-wave" d="M0 186c60-22 120-22 180 0s120 22 180 0 120-22 180 0 120 22 180 0 120-22 180 0 120 22 180 0V300H0z" fill="#A9E0E6" fill-opacity=".72"/>
+        <path d="M0 240c60-14 120-14 180 0s120 14 180 0 120-14 180 0 120 14 180 0 120-14 180 0 120 14 180 0" fill="none" stroke="#7CCFDB" stroke-width="5"/>
+        <g class="vz-bub" fill="#fff"><circle cx="330" cy="150" r="9"/><circle cx="640" cy="130" r="7"/><path d="M640 110c-8-6-12-10-12-15a6 6 0 0 1 12-3 6 6 0 0 1 12 3c0 5-4 9-12 15z" fill="#C4553D"/><path d="M320 126c-10-7-15-13-15-19a7 7 0 0 1 15-4 7 7 0 0 1 15 4c0 6-5 12-15 19z" fill="#C4553D"/></g>
+      </svg>
+      <p class="vzcaps" lang="de">Ich bin bis über beide Ohren verliebt.<span lang="ru">Влюблена по уши. Немцы даже выше: через оба уха.</span></p>
+    </figure>
   </div>
 </section>
 
@@ -1460,6 +1578,14 @@ function liebeInit(){
       whenVisible(host,function(){ if(t) return; go(); t=setInterval(go,2800); },function(){ clearInterval(t); t=null; });
     })();
   }
+  if(G&&!reduce){ (function(){
+    function enter(sel,fn,pos){ $$(sel).forEach(function(el){ ScrollTrigger.create({trigger:el,start:pos||'top 80%',once:true,onEnter:function(){ fn(el); }}); }); }
+    enter('[data-vz=akk]',function(el){ G.fromTo($('.vz-hb',el),{x:-200,y:90,scale:.5,transformOrigin:'50% 50%'},{x:0,y:0,scale:1,duration:.95,ease:'power1.inOut'}); G.fromTo($('.vz-b',el),{y:0},{y:-10,duration:.2,yoyo:true,repeat:1,delay:.9}); });
+    enter('[data-vz=ev]',function(el){ G.fromTo($('.vz-fall',el),{y:-70,scale:.7,transformOrigin:'50% 100%'},{y:0,scale:1,duration:.7,ease:'bounce.out'}); G.fromTo($('.vz-state',el),{scaleX:0,transformOrigin:'0% 50%'},{scaleX:1,duration:1.1,ease:'power2.out',delay:.7}); });
+    enter('[data-vz=strudel]',function(el){ G.fromTo($('.vz-plate',el),{y:-30,scale:.92,transformOrigin:'50% 100%'},{y:0,scale:1,duration:.7,ease:'back.out(1.6)'}); G.fromTo($('.vz-frau',el),{x:-40},{x:0,duration:.7,ease:'power3.out',delay:.1}); });
+    enter('[data-vz=ohr]',function(el){ G.fromTo($('.vz-head',el),{y:40},{y:0,duration:.9,ease:'power2.out'}); G.fromTo($('.vz-gull',el),{x:-60},{x:0,duration:1.2,ease:'sine.out'}); });
+    enter('[data-vz=miss]',function(el){ G.fromTo($$('.vzmr .ill',el),{x:-24},{x:0,duration:.7,ease:'back.out(1.7)',stagger:.12}); });
+  })(); }
   if(G){ window.addEventListener('load',function(){ ScrollTrigger.refresh(); }); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ ScrollTrigger.refresh(); }); }
 }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',liebeInit); else liebeInit();
