@@ -621,6 +621,35 @@ dialog.lb button:hover{background:var(--orange-2)}
 @keyframes vzUp{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @keyframes vzWave{0%,100%{transform:translateX(0)}50%{transform:translateX(-14px)}}
 @keyframes vzChew{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.4)}}
+
+/*ret*/
+.ret-loop{max-width:36em;margin:clamp(30px,4vw,48px) auto;padding-inline:var(--gut);text-align:center;font-size:clamp(18px,1.7vw,21px);line-height:1.4;color:var(--ink);text-wrap:pretty;position:relative;z-index:2}
+.ret-loop b{font-weight:700}
+.ret-cw{margin-block:clamp(16px,2.4vw,28px)}
+.ret-cp{background:var(--cream);border-radius:var(--r);padding:clamp(18px,2vw,26px) clamp(20px,3vw,34px);display:grid;grid-template-columns:minmax(220px,.42fr) 1fr;gap:12px 36px;align-items:center}
+.ret-cp-l b{display:block;font:400 clamp(34px,3.2vw,44px)/1 var(--f-display);color:var(--ink)}
+.ret-cp-b{display:block;height:10px;border-radius:5px;background:var(--line);margin-top:12px;overflow:hidden}
+.ret-cp-b i{display:block;height:100%;width:var(--p);border-radius:5px;background:var(--orange)}
+.ret-cp p{margin:0;font-size:16px;line-height:1.42;color:var(--text);text-wrap:pretty}
+.ret-br{padding-bottom:0}
+.ret-br + #platform{padding-top:0}
+.ret-br-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:0 clamp(28px,5vw,72px);align-items:end}
+.ret-br-p{display:block;width:100%;max-width:400px;height:auto;justify-self:center}
+.ret-br-t{align-self:center;padding-block:clamp(24px,3.6vw,52px)}
+.ret-br .ret-h{font-size:clamp(50px,5.6vw,80px)}
+.ret-l{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px}
+.ret-l li{position:relative;padding-left:26px;font-size:17px;line-height:1.36;color:var(--text);text-wrap:pretty}
+.ret-l li::before{content:"";position:absolute;left:0;top:.28em;width:14px;height:14px;border-radius:50%;background:var(--green);box-shadow:inset 0 0 0 3px var(--green-d)}
+.ret-l b{font-weight:700;color:var(--ink)}
+.ret-why{margin:20px 0 24px;font-size:17px;line-height:1.45;color:var(--text);text-wrap:pretty}
+@media (max-width:759px){
+  .ret-cp{grid-template-columns:1fr}
+  .ret-br-g{grid-template-columns:1fr}
+  .ret-br-p{max-width:320px}
+  .ret-br-t{text-align:center;padding-top:28px;padding-bottom:44px}
+  .ret-l{text-align:left;width:fit-content;margin-inline:auto}
+}
+/*/ret*/
 </style>
 
 </head>
@@ -748,6 +777,8 @@ dialog.lb button:hover{background:var(--orange-2)}
 </div></section>
 
 <!-- FAIL STORY: testimonial layout -->
+<p class="ret-loop">Одну фразу про еду запрещают многие учебники. Немцы говорят её спокойно. <b>Какую, скажу ближе к концу.</b></p>
+
 <section class="fail" id="fail">
   <div class="fail-top">
     <img class="ph-fill" id="poolBg" src="media/ph-pool.webp" alt="" width="1800" height="1013" loading="lazy">
@@ -834,6 +865,8 @@ dialog.lb button:hover{background:var(--orange-2)}
 </section>
 
 <!-- WHY -->
+<div class="wrap ret-cw"><div class="ret-cp"><div class="ret-cp-l"><b>Треть позади</b><span class="ret-cp-b" style="--p:33%"><i></i></span></div><p>Из <span class="k">10 минут</span> осталось около семи. Шесть градусов уже на месте. Дальше цена ошибки: коллега, отдел кадров и снова фрау Хубер.</p></div></div>
+
 <section id="why">
   <div class="wrap">
     <h2 class="t md c" aria-label="Что тебя ждёт"><span class="wd">Чт<svg class="rd rd-o" aria-hidden="true"><use href="#L-o"/></svg></span> <span class="wd">т<svg class="rd rd-e" aria-hidden="true"><use href="#L-e"/></svg>бя</span> <span class="wd">ждёт</span></h2>
@@ -986,6 +1019,8 @@ dialog.lb button:hover{background:var(--orange-2)}
 </section>
 
 <!-- EXCEPTIONS -->
+<div class="wrap ret-cw"><div class="ret-cp"><div class="ret-cp-l"><b>Две трети позади</b><span class="ret-cp-b" style="--p:66%"><i></i></span></div><p>Осталось минуты три. Дальше исключения: скучать тут можно двумя способами, а ещё выйдет та самая фраза про еду.</p></div></div>
+
 <section class="topo" id="exc">
   <img class="deco " src="media/obj-pizza.webp" alt="" aria-hidden="true" loading="lazy" style="right:5%;top:30px;width:clamp(70px,11vw,170px)" data-par="-120">
   <div class="wrap">
@@ -1076,6 +1111,21 @@ dialog.lb button:hover{background:var(--orange-2)}
   </div>
 </section>
 
+
+<section class="ad ret-br">
+  <div class="wrap ret-br-g">
+    <img class="ret-br-p" src="media/ph-bridge.webp" alt="" width="363" height="515" loading="lazy">
+    <div class="ret-br-t">
+      <h2 class="t ret-h" aria-label="Ich liebe Pizza! Можно. Фрау Хубер нельзя"><span class="wd">I<svg class="rd rd-c" aria-hidden="true"><use href="#L-c"/></svg>h</span> <span class="wd">li<svg class="rd rd-e" aria-hidden="true"><use href="#L-e"/></svg>b<svg class="rd rd-e" aria-hidden="true"><use href="#L-e"/></svg></span> <span class="wd">Pizza!</span> <span class="wd">М<svg class="rd rd-o" aria-hidden="true"><use href="#L-o"/></svg>жн<svg class="rd rd-o" aria-hidden="true"><use href="#L-o"/></svg>.</span> <span class="wd">Фрау</span> <span class="wd">Хуб<svg class="rd rd-e" aria-hidden="true"><use href="#L-e"/></svg>р</span> <span class="wd"><span class="k">н<svg class="rd rd-e" aria-hidden="true"><use href="#L-e"/></svg>льзя</span></span></h2>
+      <ul class="ret-l">
+        <li>Шесть градусов различаешь: от <b lang="de">Ich mag dich</b> до <b lang="de">die Liebe meines Lebens</b></li>
+        <li>Штрудель похвалишь без последствий: <b lang="de">Der schmeckt super!</b></li>
+      </ul>
+      <p class="ret-why">Это была одна тема. Всего на платформе <span class="k">340+</span> гайдов от A0 до C1, а весь путь стоит <span class="k">30 €</span> один раз.</p>
+      <a class="btn" href="#platform">Смотреть платформу</a>
+    </div>
+  </div>
+</section>
 
 <section class="ad" id="platform">
   <div class="wrap">
